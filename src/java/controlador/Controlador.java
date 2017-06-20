@@ -49,6 +49,7 @@ public class Controlador extends HttpServlet {
         
         if(user.isEmpty()){
             //Usuario vacio
+            response.sendRedirect("Pedidos.jsp?error=Usuario vacio");
         }else{
             String menus=servicio.getServiciosFukusukePort().getDatosCliente("lazo");
 
@@ -78,12 +79,16 @@ public class Controlador extends HttpServlet {
                     producer.send(message);
                     producer.close();
                     connection.close();
+                    
                 }catch(JMSException e){
+                    response.sendRedirect("Pedidos.jsp?error=Cola bad: "+e.toString());
                     //Problemas en la cola
                 }
                 
             }else{
+                response.sendRedirect("Pedidos.jsp?error=Usuario no existe");
                 //Usuario no existe
+                
             }
         }
         
