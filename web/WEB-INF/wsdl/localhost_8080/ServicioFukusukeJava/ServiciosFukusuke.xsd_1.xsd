@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://Service/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Service/">
+
+<xs:element name="getDatosCliente" type="tns:getDatosCliente"/>
+
+<xs:element name="getDatosClienteResponse" type="tns:getDatosClienteResponse"/>
+
+<xs:element name="getDatosPedido" type="tns:getDatosPedido"/>
+
+<xs:element name="getDatosPedidoResponse" type="tns:getDatosPedidoResponse"/>
+
+<xs:element name="getEstadoPedido" type="tns:getEstadoPedido"/>
+
+<xs:element name="getEstadoPedidoResponse" type="tns:getEstadoPedidoResponse"/>
+
+<xs:element name="getIdMenu" type="tns:getIdMenu"/>
+
+<xs:element name="getIdMenuResponse" type="tns:getIdMenuResponse"/>
+
+<xs:element name="getListaMenu" type="tns:getListaMenu"/>
+
+<xs:element name="getListaMenuResponse" type="tns:getListaMenuResponse"/>
+
+<xs:element name="setEstadoPedido" type="tns:setEstadoPedido"/>
+
+<xs:element name="setEstadoPedidoResponse" type="tns:setEstadoPedidoResponse"/>
+
+<xs:element name="setPedido" type="tns:setPedido"/>
+
+<xs:element name="setPedidoResponse" type="tns:setPedidoResponse"/>
+
+<xs:complexType name="getEstadoPedido">
+<xs:sequence>
+<xs:element name="codigoPedido" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getEstadoPedidoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setEstadoPedido">
+<xs:sequence>
+<xs:element name="codigoPedido" type="xs:int"/>
+<xs:element name="estado" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setEstadoPedidoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setPedido">
+<xs:sequence>
+<xs:element name="user" type="xs:string" minOccurs="0"/>
+<xs:element name="idMenu" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setPedidoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getListaMenu">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getListaMenuResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDatosPedido">
+<xs:sequence>
+<xs:element name="codigoPedido" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDatosPedidoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getIdMenu">
+<xs:sequence>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getIdMenuResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDatosCliente">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getDatosClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
